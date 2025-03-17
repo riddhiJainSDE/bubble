@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#main {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #dde5e3, #5b548a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Panel uses flex layout in a column direction */
+#panel {
+  height: 80%;
+  width: 80%;
+  background-color: rgb(237, 237, 237);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top stats section */
+#ptop {
+  flex: 0 0 15%;
+  background: linear-gradient(135deg, #5b548a, #67c1bc, #5b548a);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 10%;
+}
+
+.elem {
+  display: flex;
+  color: #494469;
+}
+
+.elem > h2 {
+  font-size: 2vw;
+  font-weight: 500;
+}
+
+.box {
+  padding: 5px 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  color: #5a5481;
+  margin-left: 1vw;
+  font-weight: 600;
+  font-size: 1.5vw;
+}
+
+/* Controls section for the buttons */
+#controls {
+  flex: 0 0 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+#controls button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #5b548a;
+  color: #fff;
+  cursor: pointer;
+}
+
+#controls button:hover {
+  background-color: #494469;
+}
+
+/* Bubble container takes the remaining space */
+#pbtm {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px;
+  overflow: hidden;
+}
+
+/* Bubble styling */
+.bubble {
+  height: 3vw;
+  width: 3vw;
+  background: linear-gradient(135deg, #5ad2d8, #5b548a);
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  font-weight: 600; 
+}
+
+.bubble:hover {
+  color: #fff;
+  background: #5b548a;
+  cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 900px) {
+  #ptop {
+    padding: 0 5%;
+  }
+  .elem > h2 {
+    font-size: 2.5vh;
+    font-weight: 700;
+  }
+  .box {
+    padding: 3px 7px;
+    font-size: 2vh;
+  }
+  .bubble {
+    height: 3.5vh;
+    width: 3.5vh; 
+  }
+}
+
+@media screen and (max-width: 650px) {
+  #ptop {
+    justify-content: space-evenly;
+  }
+  .elem > h2 {
+    font-size: 2vh;
+  }
+  .box {
+    padding: 1px 3px;
+    font-size: 2vh;
+  }
+}
